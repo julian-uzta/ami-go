@@ -23,6 +23,7 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
+    "daisyui": "^3.6.3",
     "prisma": "^5.2.0"
   }
 }
