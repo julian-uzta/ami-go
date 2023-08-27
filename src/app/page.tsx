@@ -25,7 +25,7 @@ export default function Home() {
               <img width="240px" height="120px" src="carousel/landing/image_3.jpg" alt="Third carousel image" />
             </div> 
           </div>
-          <Link href="/begin">
+          <Link href="/questionnaire">
             <button className="btn btn-secondary my-8">Comienza a explorar</button>
           </Link>
         </div>
