@@ -26,14 +26,6 @@ export const getQuestionsShort = () => {
           message: "Classical",
           options: "default"
         },
-        6: {
-          message: "Musicals",
-          options: "default"
-        },
-        7: {
-          message: "Pop",
-          options: "default"
-        },
       },
       movies: {
         0: {
@@ -58,14 +50,6 @@ export const getQuestionsShort = () => {
         },
         5: {
           message: "Sci-fi movies",
-          options: "default"
-        },
-        6: {
-          message: "War movies",
-          options: "default"
-        },
-        7: {
-          message: "Tales",
           options: "default"
         },
       },
@@ -94,14 +78,6 @@ export const getQuestionsShort = () => {
           message: "Internet",
           options: "interested"
         },
-        6: {
-          message: "PC Software, hardware",
-          options: "interested"
-        },
-        7: {
-          message: "Economy, management",
-          options: "interested"
-        },
       },
       phobias: {
         0: {
@@ -128,14 +104,6 @@ export const getQuestionsShort = () => {
           message: "Snakes",
           options: "afraid"
         },
-        6: {
-          message: "Rats, mice",
-          options: "afraid"
-        },
-        7: {
-          message: "Ageing",
-          options: "afraid"
-        },
       },
       personality: {
         0: {
@@ -160,14 +128,6 @@ export const getQuestionsShort = () => {
         },
         5: {
           message: "I believe that bad people will suffer one day and good people will be rewarded",
-          options: "agree-disagree"
-        },
-        6: {
-          message: "I am reliable at work and always complete all tasks given to me",
-          options: "agree-disagree"
-        },
-        7: {
-          message: "I always keep my promises",
           options: "agree-disagree"
         },
       },
@@ -197,10 +157,6 @@ export const getQuestionsShort = () => {
           message: "I spend a lot of money on gadgets",
           options: "agree-disagree"
         },
-        6: {
-          message: "I will happily pay more money for good, quality or healthy food",
-          options: "agree-disagree"
-        }
       }
     }    
   )
