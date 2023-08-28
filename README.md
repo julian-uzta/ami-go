@@ -1,3 +1,7 @@
+### [ML Model @ Google Colab](https://colab.research.google.com/drive/1y2R4ytmmKr4JgcMtKVNxdVJtaEUQmHd5?usp=sharing)
+
+***
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
