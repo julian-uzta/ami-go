@@ -36,6 +36,8 @@ export default function Home() {
 
   const [questionType, setQuestionType] = useState(1);
 
+  const [loading, setLoading] = useState(true);
+
   const [answerList, setAnswerList] = useState({
     "about": {},
     "music": {},
@@ -137,6 +139,12 @@ export default function Home() {
   }
 
   const handleNextStep = () => {
+    const setLoadingFalse = () => {
+      setLoading(false);
+    }
+    if((questionnaireStep + 1) == 8) {
+      setTimeout(setLoadingFalse, 5000)
+    }
     setQuestionnaireStep(questionnaireStep + 1);
     setInternalStep(1);
     setQuestionType(1);
@@ -479,12 +487,72 @@ export default function Home() {
                         <input onClick={() => {answerQuestion("personality" as QuestionOptions, 56, 'most of the day')}} type="radio" name="internetSelect" data-title="Most of the day" className="btn flex-auto w-1/4" />
                       </div>                      
                     </div>                                                         
-                    <button onClick={() => {handleSubmission()}} className="btn btn-secondary my-6">Submit</button>
+                    <button onClick={() => {handleSubmission(); handleNextStep()}} className="btn btn-secondary my-6">Submit</button>
                   </>
               }
             </>     
           )   
-        }         
+        }
+        case 8: 
+          return (
+            <>
+              {
+                loading ?
+                <>
+                  <h1 className="text-3xl font-bold pb-8">
+                    Finding matches
+                  </h1>
+                  <div>
+                    <span className="loading loading-bars loading-lg"></span>
+                  </div>
+                </>
+                :
+                <>
+                  <h1 className="text-4xl font-bold pb-8">
+                    Your matches
+                  </h1>
+                  <div className="flex flex-col w-full">
+                    <div className="card card-side bg-base-100 shadow-xl mb-2">
+                      <img width="150px" height="225px" src="/user/image_1.jpg" alt="Movie" className="rounded-lg"/>
+                      <div className="card-body">
+                        <h2 className="card-title">#1</h2>
+                        <div className="text-start">
+                          <p>Alisha Jones</p>
+                        </div>
+                        <div className="text-start">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ex magna, eget feugiat risus.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="card card-side bg-base-100 shadow-xl mb-2">
+                      <img width="150px" height="225px" src="/user/image_2.jpg" alt="Movie" className="rounded-lg"/>
+                      <div className="card-body">
+                        <h2 className="card-title">#2</h2>
+                        <div className="text-start">
+                          <p>Alex Ferguson</p>
+                        </div>
+                        <div className="text-start">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ex magna, eget feugiat risus.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="card card-side bg-base-100 shadow-xl mb-2">
+                      <img width="150px" height="225px" src="/user/image_3.jpg" alt="Movie" className="rounded-lg"/>
+                      <div className="card-body">
+                        <h2 className="card-title">#3</h2>
+                        <div className="text-start">
+                          <p>Romanya Chelsea</p>
+                        </div>
+                        <div className="text-start">
+                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse auctor ex magna, eget feugiat risus.</p>
+                        </div>
+                      </div>
+                    </div>                                        
+                  </div>
+                </>
+              }            
+            </>
+          )     
     }  
   }
 
