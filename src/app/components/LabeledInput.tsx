@@ -3,7 +3,7 @@ export const LabeledInput = ({label, updateValue}: {label: string, updateValue: 
     <div className="form-control pb-2">
       <label className="input-group input-group-sm">
         <span className="w-1/3 h-12">{label}</span>
-        <input type="text"
+        <input type="number" min="0" key={label}
           className="input input-bordered input-sm w-2/3 h-12"
           onChange={event => { updateValue(event.currentTarget.value)}}
         />

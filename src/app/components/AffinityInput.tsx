@@ -10,13 +10,14 @@ enum QuestionOptions {
   interests = "interests",
   phobias = "phobias",
   personality = "personality",
+  spending_habits = "spending_habits",
   habits = "habits"
 }
 
 export const AffinityInput = ({question, questionType, answerQuestion}: {question: Question, questionType: string, answerQuestion: Function}) => {
   return (
-    <div key={question.index} className="w-full">
-      <h3 className="text-xl py-6">
+    <div key={question.index} className="w-full border border-solid border-slate-700 rounded-lg">
+      <h3 className="text-xl py-4">
         {question.message}
       </h3>
       <div className="flex justify-center">
@@ -52,7 +53,7 @@ export const AffinityInput = ({question, questionType, answerQuestion}: {questio
           </span>        
         </div>
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center pb-4">
         <div className="flex w-1/3">
           <div className="w-1/5">
             <label>

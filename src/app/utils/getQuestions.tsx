@@ -519,7 +519,8 @@ export const getQuestions = () => {
           options: "agree-disagree"
         }
       },
-      habits: {
+      habits: {},
+      spending_habits: {
         0: {
           message: "I save all the money I can",
           options: "agree-disagree"
