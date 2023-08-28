@@ -34,7 +34,7 @@ export default function Home() {
   const [weight, setWeight] = useState<number | undefined>(undefined);
   const [siblingCount, setSiblingCount] = useState<number | undefined>(undefined);
 
-  const [questionType, setQuestionType] = useState(2);
+  const [questionType, setQuestionType] = useState(1);
 
   const [answerList, setAnswerList] = useState({
     "about": {},
@@ -116,14 +116,24 @@ export default function Home() {
   }
 
   const handleSubmission = () => {
-    let newList: any = answerList;
-    newList["about"][0] = age;
-    newList["about"][1] = height;
-    newList["about"][2] = weight;
-    newList["about"][3] = siblingCount;
-    newList["about"][7] = siblingCount ? 'no' : 'yes';
+    console.log(answerList);
+    // let newList: any = answerList;
+    // newList["about"][0] = age;
+    // newList["about"][1] = height;
+    // newList["about"][2] = weight;
+    // newList["about"][3] = siblingCount ? siblingCount : 0;
+    // newList["about"][7] = siblingCount ? 'no' : 'yes';
 
-    console.log(newList)
+    // let response = new Array(150);
+    // for(let i = 0; i < Object.entries(newList["music"]).length; i++) {
+    //   response.splice(i, 0, newList["music"][i]);
+    // }
+    // for(let i = 0; i < Object.entries(newList["movies"]).length; i++) {
+    //   response.splice(i, 19, newList["movies"][i]);
+    // }    
+    // for(let i = 0; i < Object.entries(newList["interests"]).length; i++) {
+    //   response.splice(i + 31, 0, newList["interests"][i]);
+    // }
   }
 
   const handleNextStep = () => {
